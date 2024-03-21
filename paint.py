@@ -29,7 +29,7 @@ def square(start, end):
     down()
     begin_fill()
 
-    for count in range(100):
+    for count in range(4):
         forward(end.x - start.x)
         left(90)
 
@@ -38,7 +38,16 @@ def square(start, end):
 
 def circle(start, end):
     """Draw circle from start to end."""
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for count in range(25):
+        forward(end.x - start.x)
+        left(15)
+    
+    end_fill()
 
 
 def rectangle(start, end):
